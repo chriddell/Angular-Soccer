@@ -1,0 +1,8 @@
+# Ignore
+
+## Sass files & dev/build packages
+app/style/css/sass
+app/style/css/style.css.map
+app/style/node_modules
+app/style/gruntfile.js
+app/style/package.json
