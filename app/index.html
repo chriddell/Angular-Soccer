@@ -1,9 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="dreamTeam">
 <head>
-    <title></title>
+  <meta charset="utf-8">
+  <title>As yet untitled 'soccer' project</title>
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style/css/style.css">
+  <!-- Scripts -->
+  <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 </head>
-<body>
+<body ng-controller="SquadController as squad">
+  <div class="container">
+    <div class="page-header">
+      <h1>Chris' Dream Team <small>where there are currently {{ squad.teams.length }} teams.</small></h1>
+    </div>
 
+    <!-- Team -->
+    <section ng-repeat="team in squad.teams">
+      <h2>{{ team.name }} <small>{{ team.description }}</small></h2>
+      <h3>Players</h3>
+      <div class="row">
+
+        <!-- Individual Player -->
+        <div class="media col-sm-6 col-md-4" ng-repeat="player in team.players">
+          <div class="media-left">
+            <img class="media-object" ng-src="media/img/{{ player.image }}" alt="">
+          </div>
+          <div class="media-body">
+            <h2 class="media-heading">{{ player.name }}</h2>
+            <span><strong>{{ player.position }}</strong></span>
+            <span>{{ player.country }}</span>
+            <p>{{ player.description }}</p>
+          </div>
+        </div>
+
+        <!-- Add Player Form -->
+        <div class="media well col-sm-6 col-md-4">
+          <form name="addPlayer" ng-controller="PlayerController as playerCtrl" ng-submit="playerCtrl.addPlayer(team)">
+            <div class="media-left">
+              <input type="file" ng-model="playerCtrl.player.image"/>
+            </div>
+            <div class="media-body">
+              <h2 class="media-heading">
+                <input type="text" placeholder="Name" ng-model="playerCtrl.player.name" />
+              </h2>
+              <span>
+                <select class="form-control" ng-model="playerCtrl.player.country">
+                  <option value="England">England</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Belgium">Belgium</option>
+                  <option value="Argentina">Argentina</option>
+                </select>
+              </span>
+              <span>
+                <select class="form-control" ng-model="playerCtrl.player.position">
+                  <option value="GK" selected="selected">GK</option>
+                  <option value="LB">LB</option>
+                  <option value="CB">CB</option>
+                  <option value="RB">RB</option>
+                </select>
+              </span>
+              <p>
+                <textarea placeholder="Description" ng-model="playerCtrl.player.description"></textarea>
+              </p>
+              <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
