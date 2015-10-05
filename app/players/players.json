@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Ronaldinho",
+    "country": "Brazil",
+    "position": "CF",
+    "snippet": "Test description"
+  },
+  {
+    "name": "Thomas Muller",
+    "country": "Germany",
+    "position": "CAM",
+    "snippet": "Test description"
+  },
+  {
+    "name": "Cafu",
+    "country": "Brazil",
+    "position": "CDM",
+    "snippet": "Test description"
+  },
+  {
+    "name": "Thierry Henry",
+    "country": "France",
+    "position": "CF",
+    "snippet": "Test description"
+  }
+]

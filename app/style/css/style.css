@@ -12,6 +12,8 @@
       color: transparent;
       height: 150px;
       width: 150px; }
+  .media:last-of-type .media-heading input {
+    width: 100%; }
   .media:last-of-type input:not([type="submit"]),
   .media:last-of-type select,
   .media:last-of-type textarea {
