@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="dreamteamApp">
 <head>
+
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Make IE use latest rendering mode -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>As yet untitled 'soccer' project</title>
+
   <!-- Styles -->
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style/css/style.css">
+  <!-- Bootstrap 4.0 -->
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
   <!-- Scripts -->
-  <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
-  <script type="text/javascript" src="js/controllers.js"></script>
+  <script src="js/lib/require" data-main="js/app"></script>
+
 </head>
+
 <body ng-controller="PlayerCtrl">
   <div class="container">
 
-    <section>
-      <h2>{{ team.name }} <small>{{ team.description }}</small></h2>
-      <h3>Players</h3>
+    <header>
+      <hgroup class="jumbotron">
+        <h1>Players Repo</h1>
+        <h2>An introduction to the repo lives here.</h2>
+        <input type="text" class="form-control" placeholder="Enter a player's name..." ng-model="query">
+      </hgroup>
+    </header>
+
+    <main class="js-show">
       <div class="row">
 
-        <div class="media col-sm-6 col-md-4" ng-repeat="player in players">
+        <div class="media col-md-6 col-lg-4" ng-repeat="player in players | filter:query">
           <div class="media-left">
-            <img class="media-object">
+            <img class="media-object" ng-src="{{player.imageUrl}}">
           </div>
           <div class="media-body">
-            <h2 class="media-heading">{{ player.name }}</h2>
+            <a href="#/players/{{player.id}}">
+              <h2 class="media-heading">{{ player.name }}</h2>
+            </a>
             <span><strong>{{ player.position }}</strong></span>
             <span>{{ player.country }}</span>
             <p>{{ player.description }}</p>
@@ -31,8 +48,9 @@
         </div>
 
       </div>
-    </section>
+    </main>
 
   </div>
 </body>
+
 </html>
