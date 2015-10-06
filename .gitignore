@@ -1,8 +1,20 @@
 # Ignore
 
-## Sass files & dev/build packages
-app/style/css/sass
-app/style/css/style.css.map
-app/style/node_modules
-app/style/gruntfile.js
-app/style/package.json
+
+## Sass build files & dev/build packages
+
+app/css/sass
+app/css/style.css.map
+app/css/node_modules
+app/css/gruntfile.js
+app/css/package.json
+
+
+## Bootstrap build files
+
+app/css/bootstrap/*
+!app/css/bootstrap/dist
+app/css/bootstrap/dist/*
+!app/css/bootstrap/dist/css
+app/css/bootstrap/dist/css/*
+!app/css/bootstrap/dist/css/bootstrap.min.css
