@@ -1,26 +1,34 @@
 [
   {
     "name": "Ronaldinho",
+    "id": "ronaldinho",
     "country": "Brazil",
     "position": "CF",
-    "snippet": "Test description"
+    "snippet": "Test description",
+    "imageUrl": "img/ronaldinho.png"
   },
   {
     "name": "Thomas Muller",
+    "id": "thomas-muller",
     "country": "Germany",
     "position": "CAM",
-    "snippet": "Test description"
+    "snippet": "Test description",
+    "imageUrl": "img/muller.png"
   },
   {
     "name": "Cafu",
+    "id": "cafu",
     "country": "Brazil",
     "position": "CDM",
-    "snippet": "Test description"
+    "snippet": "Test description",
+    "imageUrl": "img/cafu.png"
   },
   {
     "name": "Thierry Henry",
+    "id": "thierry-henry",
     "country": "France",
     "position": "CF",
-    "snippet": "Test description"
+    "snippet": "Test description",
+    "imageUrl": ""
   }
 ]
