@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) {
+  .media:first-child {
+    margin-top: 15px; } }
+
+.media:last-of-type {
+  margin-bottom: 15px; }
+
+img.media-object {
+  height: 150px;
+  width: 150px;
+  background-image: url("../img/avatar.png"); }
+
+a.absolute {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
