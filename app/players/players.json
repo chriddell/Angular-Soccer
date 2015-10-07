@@ -2,32 +2,56 @@
   {
     "name": "Ronaldinho",
     "id": "ronaldinho",
-    "country": "Brazil",
+    "country": "BRA",
     "position": "CF",
     "snippet": "Test description",
-    "imageUrl": "img/ronaldinho.png"
+    "imageUrl": "ronaldinho.png"
   },
   {
     "name": "Thomas Muller",
     "id": "thomas-muller",
-    "country": "Germany",
+    "country": "GER",
     "position": "CAM",
     "snippet": "Test description",
-    "imageUrl": "img/muller.png"
+    "imageUrl": "muller.png"
   },
   {
     "name": "Cafu",
     "id": "cafu",
-    "country": "Brazil",
+    "country": "BRA",
     "position": "CDM",
     "snippet": "Test description",
-    "imageUrl": "img/cafu.png"
+    "imageUrl": "cafu.png"
   },
   {
     "name": "Thierry Henry",
     "id": "thierry-henry",
-    "country": "France",
+    "country": "FRA",
     "position": "CF",
+    "snippet": "Test description",
+    "imageUrl": "henry.png"
+  },
+  {
+    "name": "Ronaldo",
+    "id": "ronaldo",
+    "country": "BRA",
+    "position": "CF",
+    "snippet": "Test description",
+    "imageUrl": "ronaldo.png"
+  },
+  {
+    "name": "Zinedine Zidane",
+    "id": "zinedine-zidane",
+    "country": "FRA",
+    "position": "CF",
+    "snippet": "Test description",
+    "imageUrl": "zidane.png"
+  },
+  {
+    "name": "Claude Makelele",
+    "id": "claude-makelele",
+    "country": "FRA",
+    "position": "CDM",
     "snippet": "Test description",
     "imageUrl": ""
   }
