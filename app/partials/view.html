@@ -1,0 +1,33 @@
+<div class="container">
+  <header class="jumbotron jumbotron--{{player.country}}">
+    <h1>{{ player.name }}</h1>
+  </header>
+
+  <main class="row">
+    <div class="media col-xs-12 player">
+      <div class="media-left">
+        <picture class="player__image">
+          <source ng-srcset="img/players/@2x-{{player.imageUrl}}" media="(min-width: 768px)">
+          <img ng-srcset="img/players/{{player.imageUrl}}, img/players/@2x-{{player.imageUrl}} 2x" alt="{{player.name}} wearing the shirt of his country of birth.">
+        </picture>
+      </div>
+      <div class="media-body">
+        <h2 class="media-heading" class="player__name">{{ player.name }}</h2>
+        <span class="player__country">
+          <img ng-src="img/flags/{{player.country}}.png" class="player__country-flag">
+          {{ player.country }}
+          </span>
+        <span class="player__position"><strong>{{ player.position }}</strong></span>
+        <p>{{ player.description }}</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="container">
+  <footer>
+    <nav role="breadcrumb" id="breadcrumb">
+      <a class="btn btn-secondary-outline" href="#/players">Back</a>
+    </nav>
+  </footer>
+</div>

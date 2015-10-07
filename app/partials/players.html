@@ -1,0 +1,35 @@
+<div class="container">
+  <header>
+    <hgroup class="jumbotron">
+      <h1>Players Repo</h1>
+      <h2>An introduction to the repo lives here.</h2>
+      <input type="text" class="form-control" placeholder="Enter a player's name..." ng-model="query">
+    </hgroup>
+  </header>
+
+  <main>
+    <div class="row">
+
+      <div class="media col-md-6 col-lg-4 player" ng-repeat="player in players | filter:query | orderBy:orderProp">
+        <div class="media-left">
+          <picture class="player__image">
+            <source ng-srcset="img/players/@2x-{{player.imageUrl}}" media="(min-width: 768px)">
+            <img ng-srcset="img/players/{{player.imageUrl}}, img/players/@2x-{{player.imageUrl}} 2x" alt="{{player.name}} wearing the shirt of his country of birth.">
+          </picture>
+        </div>
+        <div class="media-body">
+          <a href="#/players/{{player.id}}">
+            <h2 class="media-heading" class="player__name">{{ player.name }}</h2>
+          </a>
+          <span class="player__country">
+            <img ng-src="img/flags/{{player.country}}.png" class="player__country-flag">
+            {{ player.country }}
+          </span>
+          <span class="player__position"><strong>{{ player.position }}</strong></span>
+          <p>{{ player.description }}</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>

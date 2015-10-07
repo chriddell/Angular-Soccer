@@ -13,42 +13,14 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!-- Scripts -->
-  <script src="js/lib/require" data-main="js/app"></script>
+  <script type="text/javascript" src="js/lib/require" data-main="js/app"></script>
+  <script type="text/javascript" src="js/lib/angular.js"></script>
+  <script type="text/javascript" src="js/lib/angular-route.js"></script>
+  <script type="text/javascript" src="js/lib/modules/app.js"></script>
+  <script type="text/javascript" src="js/lib/modules/controllers.js"></script>
 
 </head>
 
-<body ng-controller="PlayerCtrl">
-  <div class="container">
-
-    <header>
-      <hgroup class="jumbotron">
-        <h1>Players Repo</h1>
-        <h2>An introduction to the repo lives here.</h2>
-        <input type="text" class="form-control" placeholder="Enter a player's name..." ng-model="query">
-      </hgroup>
-    </header>
-
-    <main class="js-show">
-      <div class="row">
-
-        <div class="media col-md-6 col-lg-4" ng-repeat="player in players | filter:query">
-          <div class="media-left">
-            <img class="media-object" ng-src="{{player.imageUrl}}">
-          </div>
-          <div class="media-body">
-            <a href="#/players/{{player.id}}">
-              <h2 class="media-heading">{{ player.name }}</h2>
-            </a>
-            <span><strong>{{ player.position }}</strong></span>
-            <span>{{ player.country }}</span>
-            <p>{{ player.description }}</p>
-          </div>
-        </div>
-
-      </div>
-    </main>
-
-  </div>
-</body>
+<body ng-view></body>
 
 </html>
