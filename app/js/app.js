@@ -2,9 +2,9 @@ require.config({
   baseUrl: 'js/lib/',
   paths: {
     "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min",
-    "angular": "angular.min"
+    "picturefill": "picturefill",
+    "html5-shiv": "html5-shiv"
   }
 });
 
-require(["modules/controllers"], function(){
-});
+require(["picturefill", "html5-shiv"], function(){});
